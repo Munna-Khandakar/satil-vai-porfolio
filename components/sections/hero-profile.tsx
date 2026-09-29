@@ -74,7 +74,7 @@ export function HeroProfile() {
           className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-high px-4 py-2 font-label-md text-label-md font-semibold text-on-surface transition-colors hover:bg-surface-container-highest"
         >
           <iconMap.download className="size-4" />
-          Download Dossier
+          Download
         </a>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { iconMap } from "@/components/icons/icon-map";
-import { certifications, education } from "@/lib/profile-data";
+import { certifications, continuingEducation, education } from "@/lib/profile-data";
 import { cn } from "@/lib/utils";
 
 export function CertificationsEducation() {
@@ -36,6 +36,25 @@ export function CertificationsEducation() {
             </div>
           );
         })}
+      </div>
+
+      <div className="flex flex-col gap-y-2.5 rounded-xl bg-surface-container-lowest p-4 shadow-sm">
+        <div className="flex items-center gap-2">
+          <iconMap.book className="size-[18px] text-secondary" />
+          <h4 className="font-headline-sm text-headline-sm text-on-surface">
+            Continuing Education
+          </h4>
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {continuingEducation.map((item) => (
+            <span
+              key={item}
+              className="rounded bg-surface-container px-2.5 py-1 font-label-md text-label-md text-on-surface"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="flex flex-col gap-y-4 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">

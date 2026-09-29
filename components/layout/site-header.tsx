@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { iconMap } from "@/components/icons/icon-map";
 import { NAV_LINKS, SECTION_IDS } from "@/lib/constants";
 import { profile } from "@/lib/profile-data";
 import { useActiveSection } from "@/lib/use-active-section";
@@ -26,16 +24,6 @@ export function SiteHeader() {
               <span className="hidden xs:inline">Open to Roles</span>
               <span className="xs:hidden">Available</span>
             </span>
-            <Avatar className="size-8 rounded-lg ring-1 ring-outline-variant/30">
-              <AvatarImage
-                src={profile.avatarSrc}
-                alt={profile.name}
-                className="rounded-lg object-cover"
-              />
-              <AvatarFallback className="rounded-lg bg-surface-container-high text-label-sm text-on-surface-variant">
-                {profile.avatarFallback}
-              </AvatarFallback>
-            </Avatar>
           </div>
         </div>
 
@@ -54,13 +42,6 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <a
-            href={`mailto:${profile.email}`}
-            className="ml-space-sm inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 font-label-md text-label-md font-semibold text-on-primary transition-opacity hover:opacity-90"
-          >
-            <iconMap.send className="size-4" />
-            Get in Touch
-          </a>
         </nav>
       </div>
     </header>

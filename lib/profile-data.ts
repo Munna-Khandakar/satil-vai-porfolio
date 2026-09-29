@@ -21,6 +21,14 @@ export interface ResearchTrack {
   tags: string[];
 }
 
+export interface ResearchProject {
+  title: string;
+  venue: string;
+  dateRange: string;
+  projectTitle: string;
+  bullets: string[];
+}
+
 export interface ExperienceEntry {
   org: string;
   role: string;
@@ -51,11 +59,11 @@ export interface EducationEntry {
 }
 
 export const profile = {
-  name: "Nahidul Satil, PMP®",
-  credentialTag: "Credentialed Systems Practitioner",
+  name: "Md Nahidul Satil, PMP®",
+  credentialTag: "Cybersecurity Governance Researcher",
   tagline:
-    "Prospective Graduate Researcher • Software Systems • Cybersecurity • AI-Enabled Automation",
-  location: "Austin, Texas",
+    "Prospective Graduate Researcher | Cybersecurity Governance • Cyber Policy • National Cyber Resilience",
+  location: "Austin, Texas 78665",
   phone: "(929) 471-8424",
   phoneHref: "+19294718424",
   email: "mdsatilislam@gmail.com",
@@ -65,30 +73,30 @@ export const profile = {
   avatarFallback: "NS",
   dossierHref: "/resume.pdf",
   pullQuote:
-    "Connecting rigorous scientific inquiry with resilient, mission-critical automation across defense, healthcare, and enterprise platforms.",
+    "Advancing national cyber resilience by connecting cybersecurity governance, civil–military coordination, and institutional capacity in developing and middle-income states.",
   summary:
-    "Technology professional and former military officer with 15+ years of disciplined execution across enterprise healthcare software, civil transportation data grids, manufacturing operations, and high-security national defense frameworks.",
+    "Research-oriented technology professional and former military officer with 15+ years of experience spanning defense operations, enterprise technology, cybersecurity, systems integration, and large-scale digital programs. Research interests focus on cybersecurity governance, national cyber resilience, cyber policy, critical infrastructure protection, and civil–military coordination in developing and middle-income states.",
   experienceRecordLabel: "15+ Years Systems Record",
 } as const;
 
 export const valuePillars: ValuePillar[] = [
   {
     icon: "balance",
-    title: "Mature Judgment",
+    title: "Mature Engineering Judgment",
     description:
-      "High-stakes systems experience providing grounded discernment across verification fidelity, security threat modeling, and fault tolerance.",
+      "Brings an uncommon combination of mature engineering judgment, software automation experience, cybersecurity awareness, and high-stakes systems leadership to a research environment.",
   },
   {
     icon: "hub",
-    title: "Sociotechnical Bridge",
+    title: "Cross-Domain Translator",
     description:
-      "Translates ambiguous organizational and human requirements into formal validation criteria and mathematically reproducible test architectures.",
+      "Comfortable working across technical and non-technical teams, translating operational problems into system requirements, validation plans, and measurable performance criteria.",
   },
   {
     icon: "science",
-    title: "Applied Real-World Data",
+    title: "Applied Research Orientation",
     description:
-      "Equips academic research cohorts with concrete empirical datasets spanning healthcare compliance, civic infrastructure, and multi-national logistics.",
+      "Particularly well positioned for applied research connecting academic methods with real-world software, transportation, healthcare, manufacturing, government, defense, or cyber-physical systems.",
   },
 ];
 
@@ -108,68 +116,99 @@ export const stats: StatItem[] = [
   {
     label: "Academics",
     value: "3.59",
-    sublabel: "Master of Military Sci",
+    sublabel: "Master of Defence Studies",
     accent: true,
   },
 ];
 
 export const researchTracks: ResearchTrack[] = [
   {
-    icon: "bug",
-    title: "Reliable Software Systems",
+    icon: "shield",
+    title: "Cybersecurity Governance & Policy",
     trackLabel: "TRACK 01",
     description:
-      "Formally verified software testing, empirical quality analytics, runtime safety invariant checking, and AI-assisted continuous synthesis of validation frameworks.",
-    tags: ["Verification Theory", "Regression Synthesis", "Quality Metrics"],
+      "National cybersecurity strategy, cybersecurity governance frameworks, cyber policy development, institutional coordination, and cyber risk governance.",
+    tags: ["National Strategy", "Governance Frameworks", "Policy Development"],
   },
   {
-    icon: "shield",
-    title: "Cybersecurity & Resilience",
+    icon: "lock",
+    title: "National Cyber Resilience",
     trackLabel: "TRACK 02",
     description:
-      "Identity & access authorization models, supply-chain safety, networked cyber-physical attack vector modeling, and security assurance protocols in regulated spaces.",
-    tags: ["IAM Protocols", "Zero-Trust Audit", "Security+ Assured"],
+      "National cyber defense, critical infrastructure protection, cyber capability development, and cyber resilience in developing and middle-income states.",
+    tags: ["Critical Infrastructure", "Capability Development", "Resilience"],
   },
   {
-    icon: "bot",
-    title: "AI-Enabled Automation",
+    icon: "hub",
+    title: "Civil–Military Cyber Governance",
     trackLabel: "TRACK 03",
     description:
-      "Statistical anomaly detection in telemetry, generative models for intelligent test input space exploration, automated triage, and heuristic decision-support systems.",
-    tags: ["Anomaly Inference", "GenAI Testing", "Automated Triage"],
+      "Civil–military coordination, military cyber capability, defense–civilian cybersecurity integration, and cyber operational readiness.",
+    tags: ["Civil–Military Coordination", "Military Cyber Capability", "Operational Readiness"],
   },
   {
-    icon: "workflow",
-    title: "Digital Systems & Ops",
+    icon: "book",
+    title: "Cybersecurity in Developing Countries",
     trackLabel: "TRACK 04",
     description:
-      "Complex workflow modernization, legacy system data pipeline re-engineering, and human-in-the-loop operational transparency under stringent federal or clinical compliance.",
-    tags: ["System Modernization", "Data Architecture", "Human-in-the-Loop"],
+      "South Asian cybersecurity, developing-country cyber capacity, cybersecurity institutional development, and international cybersecurity cooperation.",
+    tags: ["South Asian Cybersecurity", "Institutional Development", "International Cooperation"],
+  },
+];
+
+export const researchProjects: ResearchProject[] = [
+  {
+    title: "Independent Research Project",
+    venue: "Independent",
+    dateRange: "2026 – Present",
+    projectTitle:
+      "Toward a Resilient Digital Battlefield: Detection Capability and Strategic Force Development in Middle-Income Countries within a South Asian Context",
+    bullets: [
+      "Examines national cyber resilience and cybersecurity governance challenges in middle-income South Asian states, with Bangladesh as the primary case study.",
+      "Investigates the preparedness of military and civilian institutions to respond to contemporary cyber threats.",
+      "Examines civil–military coordination, national cybersecurity policy, and institutional cyber capability development.",
+      "Uses primary survey data and secondary policy/literature analysis to assess cybersecurity readiness.",
+      "Applies the NIST Cybersecurity Framework (CSF) 2.0 as a reference framework for evaluating organizational cybersecurity posture, and develops strategic recommendations for strengthening national cyber resilience while supporting military operational readiness.",
+    ],
+  },
+  {
+    title: "Graduate Researcher",
+    venue: "Bangladesh University of Professionals",
+    dateRange: "2015 – 2016",
+    projectTitle:
+      "Integration of JCOs and NCOs as Facilitators with the Senior Command and Leadership for Promoting Participatory Leadership in Bangladesh Army",
+    bullets: [
+      "Conducted independent graduate research examining the feasibility of integrating Junior Commissioned Officers (JCOs) and Non-Commissioned Officers (NCOs) as facilitators/advisors to senior military leadership.",
+      "Developed primary and secondary research questions examining leadership, organizational decision-making, information flow, and the role of JCOs/NCOs within the Bangladesh Army.",
+      "Collected and analyzed evidence using surveys, interviews, focus group discussions, document study, and professional experience.",
+      "Examined existing command and information-flow structures and identified organizational \"grey areas\" affecting participatory leadership.",
+      "Developed recommendations for selection, education, training, and progressive employment of JCOs/NCOs as facilitators at brigade, division, and Army levels.",
+      "Completed the study as part of the requirements for the Master of Defence Studies (MDS), Army Staff Course, 2015–2016.",
+    ],
   },
 ];
 
 export const experience: ExperienceEntry[] = [
   {
     org: "Cognizant Technology Solutions",
-    role: "Software Development Engineer in Test (SDET) • TriZetto Healthcare",
+    role: "Software Development Engineer in Test • TriZetto Provider Services, Healthcare",
     dateRange: "Mar 2021 – Jan 2026",
-    location: "Austin, TX",
-    summary:
-      "Led automated test framework engineering for mission-critical enterprise healthcare applications, ensuring rigorous regulatory compliance and stability across millions of member claims.",
+    location: "Austin, TX (Remote)",
     bullets: [
-      "Architected and maintained robust scalable test automation solutions using C#, .NET, Selenium WebDriver, and Azure DevOps, ensuring reproducible software verification pipelines.",
-      "Synthesized cross-layer integration testing linking frontend UI, microservice REST APIs, and database validations with structured SQL-driven audit tracking.",
-      "Pioneered early application of generative AI methodologies to streamline test script authoring and expand high-probability fault surface coverage.",
+      "Designed and implemented automated test frameworks using C#, .NET, Selenium, and Azure DevOps for enterprise healthcare software, creating a strong foundation in reproducible validation and software reliability.",
+      "Integrated application, API, and database validation across the software lifecycle and used SQL-based reporting to convert execution data into actionable quality metrics for technical decision-making.",
+      "Expanded regression coverage and accelerated defect detection, providing practical experience relevant to research in automated software testing, dependable systems, and AI-assisted quality engineering.",
     ],
   },
   {
     org: "Texas Department of Transportation (TxDOT)",
-    role: "SDET / QA Consultant (PRIMUS Global)",
+    role: "SDET Consultant (Part Time) • PRIMUS Global",
     dateRange: "Mar 2023 – Oct 2024",
-    location: "Austin, TX",
+    location: "Austin, TX (Remote)",
     bullets: [
-      "Spearheaded quantitative build-vs-buy feasibility studies for state-level enterprise quality infrastructure, analyzing long-term lifecycle costs and scalability.",
-      "Constructed unified Behavior-Driven Development (BDD) frameworks with SpecFlow/Cucumber, producing real-time operational telemetry for agency stakeholders.",
+      "Evaluated build-versus-buy alternatives for internal testing platforms by combining technical feasibility, scalability, and cost considerations to support executive decision-making.",
+      "Architected modernization of legacy manual workflows into a scalable Behavior-Driven Development automation platform and coordinated requirements with engineering stakeholders.",
+      "Developed dashboards and operational metrics for quality, execution progress, and deployment performance, demonstrating experience with data-informed systems engineering.",
     ],
   },
   {
@@ -178,17 +217,19 @@ export const experience: ExperienceEntry[] = [
     dateRange: "Mar 2019 – Jan 2020",
     location: "Dhaka, Bangladesh",
     bullets: [
-      "Engineered enterprise workflow modernizations connecting legacy ERP datastores to workforce automation pipelines, yielding a 25% elevation in operational accuracy.",
+      "Led enterprise data and workflow modernization across ERP and HR systems, including automated reporting, standardized process documentation, and product traceability workflows.",
+      "Improved operational accuracy by 25%, illustrating the measurable impact of systems integration and data-driven process redesign in a manufacturing environment.",
     ],
   },
   {
-    org: "Bangladesh Army & United Nations Deployments",
-    role: "Technical Project & Logistics Officer (Former Commissioned Officer)",
+    org: "Bangladesh Army",
+    role: "Technical Project & Logistics Officer",
     dateRange: "Jun 2004 – Feb 2019",
-    location: "Global Missions",
+    location: "Dhaka, Bangladesh / International deployment",
     bullets: [
-      "Directed high-security physical and digital infrastructures, notably supporting the nationwide biometric voter registration deployment under austere operational parameters.",
-      "Served under the United Nations mandate in the Democratic Republic of the Congo, managing tactical cross-border logistics telemetry, critical supplies, and high-consequence situational reporting.",
+      "Managed large-scale technical and logistics operations for defense infrastructure, national identity initiatives, and international peacekeeping missions under demanding operational constraints.",
+      "Supported nationwide biometric voter-registration rollout, including biometric data collection, validation, deployment coordination, and protection of sensitive citizen data at scale.",
+      "Coordinated cross-border logistics and operational reporting during a United Nations peacekeeping deployment in the Democratic Republic of the Congo, strengthening expertise in resilient systems, risk management, and mission-critical operations.",
     ],
   },
 ];
@@ -196,44 +237,60 @@ export const experience: ExperienceEntry[] = [
 export const skillCategories: SkillCategory[] = [
   {
     icon: "code",
-    title: "Programming & Querying",
-    tags: ["Python", "C# (.NET)", "Java", "JavaScript", "SQL (PostgreSQL/MSSQL)"],
+    title: "Research & Systems",
+    tags: ["Python", "Java", "C#", "JavaScript", "SQL"],
     monospace: true,
   },
   {
-    icon: "shieldCheck",
-    title: "Quality & Automation Frameworks",
+    icon: "lock",
+    title: "Cybersecurity & Trustworthiness",
     tags: [
-      "Selenium WebDriver",
-      "Playwright (TS/Java/C#)",
-      "Appium Mobile",
-      "Cucumber / BDD",
-      "TestNG / NUnit",
-      "RESTful API Validation",
-    ],
-  },
-  {
-    icon: "cloudDone",
-    title: "Cloud, DevOps & Security",
-    tags: [
-      "Azure DevOps CI/CD",
-      "AWS Cloud",
-      "Jenkins",
-      "Git / GitHub",
       "CompTIA Security+",
-      "IAM Architecture",
-      "CISSP Domains (In-Flight)",
+      "Identity & Access Management (IAM)",
+      "Secure Systems Architecture",
+      "Vulnerability Assessment",
+      "Threat Modeling",
+      "CISSP Training (In Progress)",
     ],
   },
   {
     icon: "microscope",
-    title: "Scientific & Analytical Methods",
+    title: "Research Methodologies",
     tags: [
-      "Experimental Test Formulation",
-      "Root-Cause Telemetry",
-      "Statistical Metrics",
-      "Feasibility Architecture",
-      "Risk & Threat Matrices",
+      "Quantitative & Qualitative Methods",
+      "Data Collection & Analysis",
+      "Experimental-Style Test Design",
+      "Empirical Verification",
+      "Validation Protocols",
+      "Feasibility Analysis",
+      "Requirements Analysis",
+      "Defect/Root-Cause Analysis",
+    ],
+  },
+  {
+    icon: "shieldCheck",
+    title: "Software Quality & Automation",
+    tags: [
+      "Selenium",
+      "Appium",
+      "Cucumber",
+      "TestNG",
+      "Playwright",
+      "Automated Security Testing",
+      "API/Web/Mobile Accessibility Testing",
+    ],
+  },
+  {
+    icon: "cloudDone",
+    title: "Cloud, DevOps & Engineering Tools",
+    tags: [
+      "AWS",
+      "Azure DevOps",
+      "Jenkins",
+      "Git",
+      "Jira",
+      "CI/CD Pipeline Security",
+      "Infrastructure-as-Code Awareness",
     ],
   },
 ];
@@ -255,23 +312,36 @@ export const certifications: Certification[] = [
     subtitle: "CLF-C02 Infrastructure Competence",
   },
   {
-    icon: "brain",
-    title: "Generative AI in Engineering",
-    subtitle: "AI Test Automation & Leadership",
+    icon: "shieldCheck",
+    title: "CISSP (In Progress)",
+    subtitle: "ISC2 Candidate • Target Exam Q4 2026",
   },
+  {
+    icon: "brain",
+    title: "Google Project Management Certificate",
+    subtitle: "Google Career Certificates",
+  },
+];
+
+export const continuingEducation: string[] = [
+  "End-to-End Test Automation with Playwright (Java/C#/TypeScript)",
+  "Selenium C3 Live Testing",
+  "Generative AI in Software Testing",
+  "Generative AI Overview for Project Managers",
+  "AI for Business Leaders",
 ];
 
 export const education: EducationEntry[] = [
   {
-    degree: "Master of Military Science",
+    degree: "Master of Defence Studies (MDS), Army Staff Course",
     institution: "Bangladesh University of Professionals",
     detail: "CGPA 3.59 / 4.00",
     detailIsBadge: true,
   },
   {
-    degree: "Bachelor of Arts (Military Studies)",
-    institution: "Bangladesh National University",
-    detail: "Commissioned Academy Program",
+    degree: "Bachelor of Arts",
+    institution: "National University",
+    detail: "2002 – 2004",
   },
 ];
 
