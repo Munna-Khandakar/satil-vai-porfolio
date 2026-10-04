@@ -10,19 +10,19 @@ export function HeroProfile() {
     >
       <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center lg:flex-col lg:items-start">
         <div className="relative shrink-0">
-          <div className="size-24 overflow-hidden rounded-xl bg-surface-container-high shadow-md sm:size-28">
-            <Avatar className="size-full rounded-xl">
+          <div className="size-24 overflow-hidden rounded-full bg-surface-container-high shadow-md sm:size-28">
+            <Avatar className="size-full rounded-full">
               <AvatarImage
                 src={profile.avatarSrc}
                 alt={profile.name}
-                className="rounded-xl object-cover object-top"
+                className="rounded-full object-cover object-top"
               />
-              <AvatarFallback className="rounded-xl bg-surface-container-high text-headline-md text-on-surface-variant">
+              <AvatarFallback className="rounded-full bg-surface-container-high text-headline-md text-on-surface-variant">
                 {profile.avatarFallback}
               </AvatarFallback>
             </Avatar>
           </div>
-          <span className="absolute -bottom-1.5 -right-1.5 flex h-4 w-4">
+          <span className="absolute bottom-1 right-1 flex h-4 w-4">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-75" />
             <span className="relative inline-flex h-4 w-4 rounded-full bg-secondary" />
           </span>

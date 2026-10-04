@@ -13,30 +13,31 @@ export function ExecutiveSummary() {
         </span>
       </div>
       <div className="flex flex-col gap-y-4 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
-        <p className="font-display text-headline-lg-mobile italic leading-snug text-on-surface md:text-headline-lg">
+        <p className="font-display text-[22px] italic leading-[30px] text-justify text-on-surface md:text-[26px] md:leading-[34px]">
           &ldquo;{profile.pullQuote}&rdquo;
         </p>
-        <p className="font-body-md text-body-md text-on-surface-variant">
+        <p className="font-body-md text-body-md text-justify text-on-surface-variant">
           {profile.summary}
         </p>
-        <div className="grid grid-cols-1 gap-3 pt-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-3 pt-2 md:grid-cols-3">
           {valuePillars.map((pillar) => {
             const Icon = iconMap[pillar.icon];
             return (
-              <div
+              <details
                 key={pillar.title}
-                className="flex flex-col gap-y-1.5 rounded-lg bg-surface-container-low p-3.5"
+                className="group rounded-lg bg-surface-container-low p-3.5"
               >
-                <div className="flex items-center gap-2 text-secondary">
-                  <Icon className="size-[18px]" />
-                  <span className="font-label-md text-label-md font-semibold text-on-surface">
+                <summary className="flex cursor-pointer list-none items-center gap-2 text-secondary [&::-webkit-details-marker]:hidden">
+                  <Icon className="size-[18px] shrink-0" />
+                  <span className="flex-1 font-label-md text-label-md font-semibold text-on-surface">
                     {pillar.title}
                   </span>
-                </div>
-                <p className="font-body-sm text-body-sm text-on-surface-variant">
+                  <iconMap.chevronDown className="size-4 shrink-0 text-on-surface-variant transition-transform group-open:rotate-180" />
+                </summary>
+                <p className="mt-1.5 font-body-sm text-body-sm text-on-surface-variant">
                   {pillar.description}
                 </p>
-              </div>
+              </details>
             );
           })}
         </div>

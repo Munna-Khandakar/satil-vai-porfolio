@@ -2,6 +2,7 @@ import {
   Award,
   Bot,
   BookOpen,
+  ChevronDown,
   Briefcase,
   Bug,
   Cloud,
@@ -37,6 +38,7 @@ import {
  */
 export const iconMap = {
   verified: BadgeCheck,
+  chevronDown: ChevronDown,
   location: MapPin,
   phone: Phone,
   mail: Mail,

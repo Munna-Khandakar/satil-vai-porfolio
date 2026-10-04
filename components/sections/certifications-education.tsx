@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { iconMap } from "@/components/icons/icon-map";
-import { certifications, continuingEducation, education } from "@/lib/profile-data";
+import { certifications, education } from "@/lib/profile-data";
 import { cn } from "@/lib/utils";
 
 export function CertificationsEducation() {
@@ -22,9 +23,21 @@ export function CertificationsEducation() {
               key={cert.title}
               className="flex items-start gap-3 rounded-xl bg-surface-container-lowest p-3.5 shadow-sm"
             >
-              <div className="shrink-0 rounded-lg bg-surface-container p-2 text-secondary">
-                <Icon className="size-5" />
-              </div>
+              {cert.logoSrc ? (
+                <div className="flex h-11 w-20 shrink-0 items-center justify-center rounded-lg bg-white p-1.5">
+                  <Image
+                    src={cert.logoSrc}
+                    alt=""
+                    width={80}
+                    height={44}
+                    className="size-full object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="shrink-0 rounded-lg bg-surface-container p-2 text-secondary">
+                  <Icon className="size-5" />
+                </div>
+              )}
               <div className="flex min-w-0 flex-col">
                 <span className="font-headline-sm text-headline-sm text-on-surface">
                   {cert.title}
@@ -36,25 +49,6 @@ export function CertificationsEducation() {
             </div>
           );
         })}
-      </div>
-
-      <div className="flex flex-col gap-y-2.5 rounded-xl bg-surface-container-lowest p-4 shadow-sm">
-        <div className="flex items-center gap-2">
-          <iconMap.book className="size-[18px] text-secondary" />
-          <h4 className="font-headline-sm text-headline-sm text-on-surface">
-            Continuing Education
-          </h4>
-        </div>
-        <div className="flex flex-wrap gap-1.5">
-          {continuingEducation.map((item) => (
-            <span
-              key={item}
-              className="rounded bg-surface-container px-2.5 py-1 font-label-md text-label-md text-on-surface"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
       </div>
 
       <div className="flex flex-col gap-y-4 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
@@ -75,18 +69,20 @@ export function CertificationsEducation() {
                 {entry.institution}
               </p>
             </div>
-            <div className="sm:text-right">
-              <span
-                className={cn(
-                  "font-label-sm text-label-sm",
-                  entry.detailIsBadge
-                    ? "rounded-md bg-surface-container-lowest px-2.5 py-1 font-bold text-secondary shadow-xs"
-                    : "text-on-surface-variant"
-                )}
-              >
-                {entry.detail}
-              </span>
-            </div>
+            {entry.detail && (
+              <div className="sm:text-right">
+                <span
+                  className={cn(
+                    "font-label-sm text-label-sm",
+                    entry.detailIsBadge
+                      ? "rounded-md bg-surface-container-lowest px-2.5 py-1 font-bold text-secondary shadow-xs"
+                      : "text-on-surface-variant"
+                  )}
+                >
+                  {entry.detail}
+                </span>
+              </div>
+            )}
           </div>
         ))}
       </div>

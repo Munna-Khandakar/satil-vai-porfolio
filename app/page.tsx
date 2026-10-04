@@ -5,7 +5,6 @@ import { ImpactStats } from "@/components/sections/impact-stats";
 import { ResearchFoci } from "@/components/sections/research-foci";
 import { ResearchExperience } from "@/components/sections/research-experience";
 import { ExperienceTimeline } from "@/components/sections/experience-timeline";
-import { SkillsGrid } from "@/components/sections/skills-grid";
 import { CertificationsEducation } from "@/components/sections/certifications-education";
 import { ContactSection } from "@/components/sections/contact-section";
 
@@ -17,7 +16,6 @@ export default function Home() {
       <ResearchFoci />
       <ResearchExperience />
       <ExperienceTimeline />
-      <SkillsGrid />
       <CertificationsEducation />
       <ContactSection />
     </PageShell>

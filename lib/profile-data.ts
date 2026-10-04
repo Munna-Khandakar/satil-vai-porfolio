@@ -38,31 +38,24 @@ export interface ExperienceEntry {
   bullets: string[];
 }
 
-export interface SkillCategory {
-  icon: IconName;
-  title: string;
-  tags: string[];
-  monospace?: boolean;
-}
-
 export interface Certification {
   icon: IconName;
   title: string;
   subtitle: string;
+  logoSrc?: string;
 }
 
 export interface EducationEntry {
   degree: string;
   institution: string;
-  detail: string;
+  detail?: string;
   detailIsBadge?: boolean;
 }
 
 export const profile = {
   name: "Md Nahidul Satil, PMP®",
   credentialTag: "Cybersecurity Governance Researcher",
-  tagline:
-    "Prospective Graduate Researcher | Cybersecurity Governance • Cyber Policy • National Cyber Resilience",
+  tagline: "Prospective Graduate Researcher",
   location: "Austin, Texas 78665",
   phone: "(929) 471-8424",
   phoneHref: "+19294718424",
@@ -110,8 +103,8 @@ export const stats: StatItem[] = [
   },
   {
     label: "Mission Scope",
-    value: "UN & Gov",
-    sublabel: "Peacekeeping & Biometrics",
+    value: "UN",
+    sublabel: "International Peacekeeping",
   },
   {
     label: "Academics",
@@ -223,74 +216,11 @@ export const experience: ExperienceEntry[] = [
   },
   {
     org: "Bangladesh Army",
-    role: "Technical Project & Logistics Officer",
+    role: "Military Officer",
     dateRange: "Jun 2004 – Feb 2019",
-    location: "Dhaka, Bangladesh / International deployment",
+    location: "International Deployment (UN)",
     bullets: [
-      "Managed large-scale technical and logistics operations for defense infrastructure, national identity initiatives, and international peacekeeping missions under demanding operational constraints.",
-      "Supported nationwide biometric voter-registration rollout, including biometric data collection, validation, deployment coordination, and protection of sensitive citizen data at scale.",
       "Coordinated cross-border logistics and operational reporting during a United Nations peacekeeping deployment in the Democratic Republic of the Congo, strengthening expertise in resilient systems, risk management, and mission-critical operations.",
-    ],
-  },
-];
-
-export const skillCategories: SkillCategory[] = [
-  {
-    icon: "code",
-    title: "Research & Systems",
-    tags: ["Python", "Java", "C#", "JavaScript", "SQL"],
-    monospace: true,
-  },
-  {
-    icon: "lock",
-    title: "Cybersecurity & Trustworthiness",
-    tags: [
-      "CompTIA Security+",
-      "Identity & Access Management (IAM)",
-      "Secure Systems Architecture",
-      "Vulnerability Assessment",
-      "Threat Modeling",
-      "CISSP Training (In Progress)",
-    ],
-  },
-  {
-    icon: "microscope",
-    title: "Research Methodologies",
-    tags: [
-      "Quantitative & Qualitative Methods",
-      "Data Collection & Analysis",
-      "Experimental-Style Test Design",
-      "Empirical Verification",
-      "Validation Protocols",
-      "Feasibility Analysis",
-      "Requirements Analysis",
-      "Defect/Root-Cause Analysis",
-    ],
-  },
-  {
-    icon: "shieldCheck",
-    title: "Software Quality & Automation",
-    tags: [
-      "Selenium",
-      "Appium",
-      "Cucumber",
-      "TestNG",
-      "Playwright",
-      "Automated Security Testing",
-      "API/Web/Mobile Accessibility Testing",
-    ],
-  },
-  {
-    icon: "cloudDone",
-    title: "Cloud, DevOps & Engineering Tools",
-    tags: [
-      "AWS",
-      "Azure DevOps",
-      "Jenkins",
-      "Git",
-      "Jira",
-      "CI/CD Pipeline Security",
-      "Infrastructure-as-Code Awareness",
     ],
   },
 ];
@@ -300,35 +230,32 @@ export const certifications: Certification[] = [
     icon: "award",
     title: "PMP® Certification",
     subtitle: "Project Management Institute (PMI)",
+    logoSrc: "/logos/pmi.png",
   },
   {
     icon: "lock",
     title: "CompTIA Security+",
     subtitle: "Systems Security, IAM & Hardening",
+    logoSrc: "/logos/comptia.svg",
   },
   {
     icon: "cloud",
     title: "AWS Certified Cloud Practitioner",
     subtitle: "CLF-C02 Infrastructure Competence",
+    logoSrc: "/logos/aws.svg",
   },
   {
     icon: "shieldCheck",
     title: "CISSP (In Progress)",
     subtitle: "ISC2 Candidate • Target Exam Q4 2026",
+    logoSrc: "/logos/isc2.svg",
   },
   {
     icon: "brain",
     title: "Google Project Management Certificate",
     subtitle: "Google Career Certificates",
+    logoSrc: "/logos/google.svg",
   },
-];
-
-export const continuingEducation: string[] = [
-  "End-to-End Test Automation with Playwright (Java/C#/TypeScript)",
-  "Selenium C3 Live Testing",
-  "Generative AI in Software Testing",
-  "Generative AI Overview for Project Managers",
-  "AI for Business Leaders",
 ];
 
 export const education: EducationEntry[] = [
@@ -341,7 +268,6 @@ export const education: EducationEntry[] = [
   {
     degree: "Bachelor of Arts",
     institution: "National University",
-    detail: "2002 – 2004",
   },
 ];
 
