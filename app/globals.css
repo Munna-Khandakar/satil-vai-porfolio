@@ -48,6 +48,16 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
+  /* Academic theme (modelled on a Google Sites faculty page) */
+  --color-sidebar-bg: #212121;
+  --color-sidebar-fg: #e8e8e8;
+  --color-sidebar-active: #5ab4e0;
+  --color-heading: #1f6a96;
+  --color-ink: #212121;
+  --color-ink-muted: #5f6368;
+  --color-link: #0b5e8c;
+  --color-rule: #e3e3e3;
+
   /* MD3 dossier palette, exposed as Tailwind color utilities (bg-surface, text-on-surface, ...) */
   --color-surface: var(--md-surface);
   --color-surface-dim: var(--md-surface-dim);
@@ -183,7 +193,7 @@
 }
 
 :root {
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
 
   /* MD3 dossier palette — literal hex values, authoritative from code.html's tailwind.config */
   --md-surface: #f7f9fb;
@@ -274,18 +284,13 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
-    @apply font-sans scroll-smooth;
+    @apply font-sans;
   }
-  section[id] {
-    scroll-margin-top: 4.5rem;
+  body {
+    @apply bg-white text-ink;
   }
-  @media (min-width: 1024px) {
-    section[id] {
-      scroll-margin-top: 7rem;
-    }
+  a {
+    @apply text-link underline underline-offset-2 hover:text-heading;
   }
 }

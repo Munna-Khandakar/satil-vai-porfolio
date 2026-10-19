@@ -1,12 +1,5 @@
 import type { IconName } from "@/components/icons/icon-map";
 
-export interface StatItem {
-  label: string;
-  value: string;
-  sublabel: string;
-  accent?: boolean;
-}
-
 export interface ValuePillar {
   icon: IconName;
   title: string;
@@ -60,16 +53,16 @@ export const profile = {
   phone: "(929) 471-8424",
   phoneHref: "+19294718424",
   email: "mdsatilislam@gmail.com",
+  linkedinHref: "https://www.linkedin.com/in/mdnahidultxsatil",
+  linkedinLabel: "linkedin.com/in/mdnahidultxsatil",
   availabilityBanner:
-    "Available for Graduate Research & Strategic Technical Leadership (Ph.D. / M.S. Opportunities)",
+    "Available for Ph.D. Research Opportunities",
   avatarSrc: "/profile.jpeg",
-  avatarFallback: "NS",
   dossierHref: "/resume.pdf",
   pullQuote:
     "Advancing national cyber resilience by connecting cybersecurity governance, civil–military coordination, and institutional capacity in developing and middle-income states.",
   summary:
     "Research-oriented technology professional and former military officer with 15+ years of experience spanning defense operations, enterprise technology, cybersecurity, systems integration, and large-scale digital programs. Research interests focus on cybersecurity governance, national cyber resilience, cyber policy, critical infrastructure protection, and civil–military coordination in developing and middle-income states.",
-  experienceRecordLabel: "15+ Years Systems Record",
 } as const;
 
 export const valuePillars: ValuePillar[] = [
@@ -90,27 +83,6 @@ export const valuePillars: ValuePillar[] = [
     title: "Applied Research Orientation",
     description:
       "Particularly well positioned for applied research connecting academic methods with real-world software, transportation, healthcare, manufacturing, government, defense, or cyber-physical systems.",
-  },
-];
-
-export const stats: StatItem[] = [
-  { label: "Experience", value: "15+", sublabel: "Years Systems & Ops" },
-  {
-    label: "Optimization",
-    value: "+25%",
-    sublabel: "Process Accuracy",
-    accent: true,
-  },
-  {
-    label: "Mission Scope",
-    value: "UN",
-    sublabel: "International Peacekeeping",
-  },
-  {
-    label: "Academics",
-    value: "3.59",
-    sublabel: "Master of Defence Studies",
-    accent: true,
   },
 ];
 

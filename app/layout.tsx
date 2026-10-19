@@ -1,46 +1,36 @@
 import type { Metadata } from "next";
-import { Newsreader, Inter, Geist } from "next/font/google";
-import { SiteHeader } from "@/components/layout/site-header";
-import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
+import { Lato } from "next/font/google";
+import { Sidebar } from "@/components/layout/sidebar";
+import { MobileNav } from "@/components/layout/mobile-nav";
 import "./globals.css";
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["300", "400", "700"],
   style: ["normal", "italic"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const geist = Geist({
-  variable: "--font-geist",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
 export const metadata: Metadata = {
-  title: "Nahidul Satil, PMP | Systems & Engineering Dossier",
+  title: {
+    default: "Md Nahidul Satil",
+    template: "%s | Md Nahidul Satil",
+  },
   description:
-    "Prospective graduate researcher and systems engineering leader — software systems, cybersecurity, and AI-enabled automation.",
+    "Prospective Ph.D. researcher in cybersecurity governance, cyber policy, and national cyber resilience.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${newsreader.variable} ${inter.variable} ${geist.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-surface text-on-surface">
-        <SiteHeader />
-        <main className="flex-1 w-full pt-16 pb-24 lg:pt-28 lg:pb-16">
-          {children}
+    <html lang="en" className={`${lato.variable} h-full antialiased`}>
+      <body className="min-h-full">
+        <Sidebar />
+        <MobileNav />
+        <main className="lg:pl-[250px]">
+          <div className="mx-auto max-w-4xl px-5 py-12 md:px-10 md:py-16">
+            {children}
+          </div>
         </main>
-        <MobileBottomNav />
       </body>
     </html>
   );
