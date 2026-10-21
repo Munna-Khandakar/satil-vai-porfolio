@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Expandable } from "@/components/expandable";
 import { PageTitle, SectionHeading } from "@/components/page-title";
-import { ContactList } from "@/components/profile/contact-list";
 import { iconMap } from "@/components/icons/icon-map";
 import { profile, valuePillars } from "@/lib/profile-data";
 
@@ -39,7 +38,6 @@ export default function Home() {
             <iconMap.download className="size-4" />
             Curriculum Vitae
           </a>
-          <ContactList />
         </div>
       </div>
 

@@ -188,10 +188,13 @@ export const experience: ExperienceEntry[] = [
   },
   {
     org: "Bangladesh Army",
-    role: "Military Officer",
+    role: "Technical Project & Logistics Officer",
     dateRange: "Jun 2004 – Feb 2019",
-    location: "International Deployment (UN)",
+    location: "Dhaka, Bangladesh / International deployment",
     bullets: [
+      "Managed large-scale technical and logistics operations for defense infrastructure, national identity initiatives, and international peacekeeping missions under demanding operational constraints.",
+      "Supported nationwide biometric voter-registration rollout, including biometric data collection, validation, deployment coordination, and protection of sensitive citizen data at scale.",
+      "Wargaming Simulation Systems: Translated complex tactical doctrine into software requirements, validating battle tactics models to ensure high-fidelity simulation outcomes within defense software.",
       "Coordinated cross-border logistics and operational reporting during a United Nations peacekeeping deployment in the Democratic Republic of the Congo, strengthening expertise in resilient systems, risk management, and mission-critical operations.",
     ],
   },
