@@ -36,6 +36,8 @@ export interface Certification {
   title: string;
   subtitle: string;
   logoSrc?: string;
+  /** Path under /public to the certificate PDF, if one is available. */
+  certificateHref?: string;
 }
 
 export interface EducationEntry {
@@ -202,34 +204,45 @@ export const experience: ExperienceEntry[] = [
 
 export const certifications: Certification[] = [
   {
+    icon: "shieldCheck",
+    title: "CISSP (Endorsement In Progress)",
+    subtitle: "ISC2 Candidate • Passed Exam on Oct 28, 2026",
+    logoSrc: "/logos/isc2.svg",
+  },
+  {
     icon: "award",
     title: "PMP® Certification",
     subtitle: "Project Management Institute (PMI)",
     logoSrc: "/logos/pmi.png",
-  },
-  {
-    icon: "lock",
-    title: "CompTIA Security+",
-    subtitle: "Systems Security, IAM & Hardening",
-    logoSrc: "/logos/comptia.svg",
-  },
-  {
-    icon: "cloud",
-    title: "AWS Certified Cloud Practitioner",
-    subtitle: "CLF-C02 Infrastructure Competence",
-    logoSrc: "/logos/aws.svg",
-  },
-  {
-    icon: "shieldCheck",
-    title: "CISSP (In Progress)",
-    subtitle: "ISC2 Candidate • Target Exam Q4 2026",
-    logoSrc: "/logos/isc2.svg",
+    certificateHref: "/certificates/PMI Certification.pdf",
   },
   {
     icon: "brain",
     title: "Google Project Management Certificate",
     subtitle: "Google Career Certificates",
     logoSrc: "/logos/google.svg",
+    certificateHref: "/certificates/Google_Coursera_Project Management.pdf",
+  },
+  {
+    icon: "lock",
+    title: "CompTIA Security+",
+    subtitle: "Systems Security, IAM & Hardening",
+    logoSrc: "/logos/comptia.svg",
+    certificateHref: "/certificates/CompTIA Security+ ce certificate.pdf",
+  },
+  {
+    icon: "cloud",
+    title: "AWS Certified Cloud Practitioner",
+    subtitle: "CLF-C02 Infrastructure Competence",
+    logoSrc: "/logos/aws.svg",
+    certificateHref: "/certificates/AWS_ Cloud Practitioner.pdf",
+  },
+  {
+    icon: "brain",
+    title: "Generative AI Overview for Project Managers",
+    subtitle: "Project Management Institute (PMI)",
+    logoSrc: "/logos/pmi.png",
+    certificateHref: "/certificates/AI Over view for PM.pdf",
   },
 ];
 

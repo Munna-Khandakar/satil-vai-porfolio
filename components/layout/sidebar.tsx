@@ -7,7 +7,7 @@ export function Sidebar() {
     <aside className="fixed inset-y-0 left-0 hidden w-[250px] flex-col overflow-y-auto bg-sidebar-bg px-10 py-12 lg:flex">
       <Link
         href="/"
-        className="mb-12 text-center text-2xl font-light leading-tight text-white no-underline"
+        className="mb-12 text-center text-2xl font-light leading-tight text-white no-underline transition-colors duration-300 hover:text-sidebar-active"
       >
         Md Nahidul Satil
       </Link>

@@ -10,12 +10,14 @@ export function Expandable({
   children: ReactNode;
 }) {
   return (
-    <details className="group border-b border-rule py-3">
-      <summary className="flex cursor-pointer list-none items-center gap-3 [&::-webkit-details-marker]:hidden">
+    <details className="group border-b border-rule transition-colors duration-200 hover:bg-heading/5">
+      <summary className="flex cursor-pointer list-none items-center gap-3 px-3 py-4 text-ink transition-colors duration-200 group-hover:text-heading [&::-webkit-details-marker]:hidden">
         <div className="min-w-0 flex-1">{summary}</div>
-        <iconMap.chevronDown className="size-4 shrink-0 text-ink-muted transition-transform group-open:rotate-180" />
+        <iconMap.chevronDown className="size-4 shrink-0 text-ink-muted transition-all duration-300 group-open:rotate-180 group-hover:text-heading" />
       </summary>
-      <div className="pt-2 text-[15px] leading-relaxed text-ink">{children}</div>
+      <div className="animate-in fade-in slide-in-from-top-1 px-3 pb-4 text-[15px] leading-relaxed text-ink duration-300">
+        {children}
+      </div>
     </details>
   );
 }

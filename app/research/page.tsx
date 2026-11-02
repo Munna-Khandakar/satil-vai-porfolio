@@ -17,7 +17,7 @@ export default function ResearchPage() {
             key={track.title}
             summary={
               <span className="flex flex-wrap items-baseline gap-x-3">
-                <span className="text-[17px] text-ink">{track.title}</span>
+                <span className="text-[17px]">{track.title}</span>
                 <span className="text-xs uppercase tracking-wider text-ink-muted">
                   {track.trackLabel}
                 </span>

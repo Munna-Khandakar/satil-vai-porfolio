@@ -291,6 +291,18 @@
     @apply bg-white text-ink;
   }
   a {
-    @apply text-link underline underline-offset-2 hover:text-heading;
+    @apply text-link underline underline-offset-2 transition-colors duration-200 hover:text-heading;
+  }
+}
+
+/* Respect users who ask the OS for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

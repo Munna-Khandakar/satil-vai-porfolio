@@ -14,7 +14,7 @@ export function MobileNav() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="text-lg font-light text-white no-underline"
+          className="text-lg font-light text-white no-underline transition-colors duration-300 hover:text-sidebar-active"
         >
           Md Nahidul Satil
         </Link>
@@ -24,13 +24,17 @@ export function MobileNav() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="-mr-2 p-2 text-white"
+          className="-mr-2 rounded-sm p-2 text-white transition-colors duration-200 hover:bg-white/10 hover:text-sidebar-active"
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </div>
       {open && (
-        <nav id="mobile-menu" aria-label="Main" className="px-5 pb-4">
+        <nav
+          id="mobile-menu"
+          aria-label="Main"
+          className="animate-in fade-in slide-in-from-top-2 px-5 pb-4 duration-200"
+        >
           <NavLinks onNavigate={() => setOpen(false)} />
         </nav>
       )}

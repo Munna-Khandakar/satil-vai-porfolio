@@ -20,7 +20,7 @@ export default function Home() {
           width={480}
           height={480}
           preload
-          className="aspect-square w-56 shrink-0 rounded-2xl object-cover object-top shadow-sm md:w-60"
+          className="aspect-square w-56 shrink-0 rounded-2xl object-cover object-top shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg md:w-60"
         />
 
         <div className="flex min-w-0 flex-col gap-5">
@@ -33,9 +33,9 @@ export default function Home() {
           <a
             href={profile.dossierHref}
             download
-            className="inline-flex w-fit items-center gap-1.5"
+            className="group inline-flex w-fit items-center gap-1.5"
           >
-            <iconMap.download className="size-4" />
+            <iconMap.download className="size-4 transition-transform duration-200 group-hover:translate-y-0.5" />
             Curriculum Vitae
           </a>
         </div>
@@ -47,7 +47,7 @@ export default function Home() {
           <Expandable
             key={pillar.title}
             summary={
-              <span className="text-[17px] text-ink">{pillar.title}</span>
+              <span className="text-[17px]">{pillar.title}</span>
             }
           >
             <p>{pillar.description}</p>
