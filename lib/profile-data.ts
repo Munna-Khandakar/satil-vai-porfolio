@@ -48,7 +48,7 @@ export interface EducationEntry {
 }
 
 export const profile = {
-  name: "Md Nahidul Satil, PMP®",
+  name: "Md Nahidul Satil, CISSP, PMP",
   credentialTag: "Cybersecurity Governance Researcher",
   tagline: "Prospective Graduate Researcher",
   location: "Austin, Texas 78665",
@@ -205,13 +205,14 @@ export const experience: ExperienceEntry[] = [
 export const certifications: Certification[] = [
   {
     icon: "shieldCheck",
-    title: "CISSP (Endorsement In Progress)",
-    subtitle: "ISC2 Candidate • Passed Exam on Oct 28, 2026",
+    title: "CISSP Certified",
+    subtitle: "ISC2 • Certified Information Systems Security Professional",
     logoSrc: "/logos/isc2.svg",
+    certificateHref: "/certificates/CISSP_digitalcert.pdf",
   },
   {
     icon: "award",
-    title: "PMP® Certification",
+    title: "PMP Certified",
     subtitle: "Project Management Institute (PMI)",
     logoSrc: "/logos/pmi.png",
     certificateHref: "/certificates/PMI Certification.pdf",

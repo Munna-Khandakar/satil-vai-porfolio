@@ -7,7 +7,7 @@ import { profile, valuePillars } from "@/lib/profile-data";
 export default function Home() {
   return (
     <>
-      <PageTitle title="Md Nahidul Satil, PMP®">
+      <PageTitle title={profile.name}>
         <p>{profile.tagline}</p>
         <p>{profile.credentialTag}</p>
         <p className="text-base text-heading">{profile.availabilityBanner}</p>
