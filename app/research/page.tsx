@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ArrowUpRight } from "lucide-react";
 import { Expandable } from "@/components/expandable";
 import { PageTitle, SectionHeading } from "@/components/page-title";
 import { researchProjects, researchTracks } from "@/lib/profile-data";
@@ -46,6 +47,21 @@ export default function ResearchPage() {
                 <li key={i}>{bullet}</li>
               ))}
             </ul>
+            {project.paperHref && (
+              <a
+                href={project.paperHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View paper: ${project.projectTitle} (PDF, opens in a new tab)`}
+                className="group mt-3 inline-flex w-fit items-center gap-1 text-sm"
+              >
+                View paper (PDF)
+                <ArrowUpRight
+                  className="size-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  aria-hidden
+                />
+              </a>
+            )}
           </article>
         ))}
       </div>

@@ -20,6 +20,8 @@ export interface ResearchProject {
   dateRange: string;
   projectTitle: string;
   bullets: string[];
+  /** Path under /public to the paper PDF, if one is available. */
+  paperHref?: string;
 }
 
 export interface ExperienceEntry {
@@ -153,6 +155,7 @@ export const researchProjects: ResearchProject[] = [
   },
   {
     title: "Graduate Researcher",
+    paperHref: "/research/jco-nco-facilitators-2015.pdf",
     venue: "Bangladesh University of Professionals",
     dateRange: "2015 – 2016",
     projectTitle:
