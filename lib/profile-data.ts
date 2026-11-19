@@ -55,8 +55,9 @@ export interface Recommendation {
 export interface EducationEntry {
   degree: string;
   institution: string;
+  dateRange?: string;
   detail?: string;
-  detailIsBadge?: boolean;
+  coursework?: string;
 }
 
 export const profile = {
@@ -162,7 +163,7 @@ export const researchProjects: ResearchProject[] = [
       "Collected and analyzed evidence using surveys, interviews, focus group discussions, document study, and professional experience.",
       "Examined existing command and information-flow structures and identified organizational \"grey areas\" affecting participatory leadership.",
       "Developed recommendations for selection, education, training, and progressive employment of JCOs/NCOs as facilitators at brigade, division, and Army levels.",
-      "Completed the study as part of the requirements for the Master of Defence Studies (MDS), Army Staff Course, 2015–2016.",
+      "Completed the study as part of the requirements for the Master of Science in Military Studies (MSc), Defence Services Command and Staff College, 2015–2016.",
     ],
   },
 ];
@@ -278,14 +279,18 @@ export const recommendations: Recommendation[] = [
 
 export const education: EducationEntry[] = [
   {
-    degree: "Master of Defence Studies (MDS), Army Staff Course",
-    institution: "Bangladesh University of Professionals",
+    degree: "Master of Science in Military Studies (MSc)",
+    institution:
+      "Defence Services Command and Staff College, Bangladesh University of Professionals (BUP)",
+    dateRange: "2015 – 2016",
     detail: "CGPA 3.59 / 4.00",
-    detailIsBadge: true,
+    coursework:
+      "National and International Security Studies, Strategy and Theories of Warfare, Defence Management",
   },
   {
     degree: "Bachelor of Arts",
-    institution: "National University",
+    institution: "National University, Bangladesh",
+    dateRange: "2002 – 2004",
   },
 ];
 

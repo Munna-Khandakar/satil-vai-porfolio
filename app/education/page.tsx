@@ -17,11 +17,22 @@ export default function EducationPage() {
         {education.map((entry) => (
           <li key={entry.degree}>
             <span className="font-bold text-ink">{entry.degree}</span>
+            {entry.dateRange && (
+              <span className="text-ink-muted"> · {entry.dateRange}</span>
+            )}
             <br />
             <span className="text-ink-muted">
               {entry.institution}
               {entry.detail && <> · {entry.detail}</>}
             </span>
+            {entry.coursework && (
+              <>
+                <br />
+                <span className="text-sm text-ink-muted">
+                  <em>Coursework:</em> {entry.coursework}
+                </span>
+              </>
+            )}
           </li>
         ))}
       </ul>
