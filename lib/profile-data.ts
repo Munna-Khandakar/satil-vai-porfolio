@@ -40,6 +40,18 @@ export interface Certification {
   certificateHref?: string;
 }
 
+export interface Recommendation {
+  name: string;
+  postNominals?: string;
+  positions: string[];
+  relationship: string;
+  date: string;
+  /** Verbatim excerpt from the letter. */
+  quote: string;
+  /** Path under /public to the letter PDF. */
+  letterHref: string;
+}
+
 export interface EducationEntry {
   degree: string;
   institution: string;
@@ -244,6 +256,23 @@ export const certifications: Certification[] = [
     subtitle: "Project Management Institute (PMI)",
     logoSrc: "/logos/pmi.png",
     certificateHref: "/certificates/AI Over view for PM.pdf",
+  },
+];
+
+export const recommendations: Recommendation[] = [
+  {
+    name: "Major General Md Mostafizur Rahman, PhD (Retd)",
+    postNominals: "SUP, ndc, hdmc, afwc, psc",
+    positions: [
+      "Professor (Adjunct), Military Institute of Science and Technology (MIST), Dhaka",
+      "Professor (Adjunct), Army Institute of Business Administration (Army IBA), Savar",
+    ],
+    relationship:
+      "Former Platoon Commander at Bangladesh Military Academy; served together in 11 Infantry Division",
+    date: "November 2026",
+    quote:
+      "I recommend Mr. Satil without reservation for doctoral studies, advanced research programs, academic fellowships, and professional positions requiring intellectual rigor, technical excellence, leadership potential, and strategic judgment.",
+    letterHref: "/recommendations/Recom_Gen Mostafiz.pdf",
   },
 ];
 
